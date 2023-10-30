@@ -1,0 +1,31 @@
+import json
+import base64
+from httplib2 import Http
+from json import dumps
+
+def lambda_handler(event, context):
+    try:
+        encoded_payload = event
+        response_message = {
+            'text': f"{event} is not working"
+            
+        }
+        print(response_message)
+
+        url = "https://chat.googleapis.com/v1/spaces/AAAA07jwxmo/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=HBXhc9h0nPwBUUWPv1DoGBGZacY6PSWHhHyL9IBf9dM"
+        message_headers = {'Content-Type': 'application/json; charset=UTF-8'}
+        http_obj = Http()
+        response = http_obj.request(
+                uri=url,
+                method='POST',
+                headers=message_headers,
+                body=dumps(response_message),
+            )
+ 
+        return response
+    except Exception as e:
+        print(f"Error: {str(e)}")
+        return {
+            'statusCode': 500,
+            'body': "Internal Server Error"
+        }
