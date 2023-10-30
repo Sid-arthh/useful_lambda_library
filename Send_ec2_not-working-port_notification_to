@@ -12,7 +12,7 @@ def lambda_handler(event, context):
         }
         print(response_message)
 
-        url = "https://chat.googleapis.com/v1/spaces/AAAA07jwxmo/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=HBXhc9h0nPwBUUWPv1DoGBGZacY6PSWHhHyL9IBf9dM"
+        url = "WebHook Url"
         message_headers = {'Content-Type': 'application/json; charset=UTF-8'}
         http_obj = Http()
         response = http_obj.request(
