@@ -1,4 +1,4 @@
-# useful_lambda_library
+# Send the ec2 ports which are not working to your slack or hangouts via webhook and lambda 
 First try to copy paste the code , use your Hangout space WEBhook URL , in url=
 Do below steps if You are getting dependency error while running Code on lambda directly 
 
