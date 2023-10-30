@@ -18,4 +18,5 @@ $ sudo pip3 install requests -t .
 
 ##Step 4:
 Zip up the file and dependency and upload it to lambda
+
 zip -r python_code.zip .
